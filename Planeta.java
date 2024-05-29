@@ -20,29 +20,27 @@ public class Planeta{
     public String getNombre() {
         return nombre;
     }
-
     public int getCosto() {
         return costo;
     }
-
     public boolean getDisponibilidad() {
         return disponibilidad;
     }
-
     public String getItinerario() {
-        return usuario;
+        return itinerario;
     }
     public String getEquipo() {
-        return nombre;
+        return equipo;
     }
     public String getTipo() {
-        return nombre;
+        return tipo;
     }
-
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
     public void setCosto(int costo) {
         this.costo = costo;
     }
-
     public void setDisponibilidad(boolean disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
@@ -58,9 +56,6 @@ public class Planeta{
      public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
-
-
 }
 
 }
