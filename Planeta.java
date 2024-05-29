@@ -1,4 +1,4 @@
-public class Planeta{
+public class Planeta {
 
     private String nombre;
     private int costo; 
@@ -6,6 +6,7 @@ public class Planeta{
     private String itinerario;
     private String equipo;
     private String tipo;
+
 
     //Constructor
     public Planeta(String nombre, int costo, boolean disponibilidad,String itinerario, String equipo,String tipo) {
@@ -15,6 +16,7 @@ public class Planeta{
         this.itinerario=itinerario; 
         this.equipo=equipo; 
         this.tipo=tipo;
+    
     }
     
     //Getters y setters
@@ -56,5 +58,6 @@ public class Planeta{
 
      public void setTipo(String tipo) {
         this.tipo = tipo;
+
     }
 }

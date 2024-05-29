@@ -10,5 +10,6 @@ public class Destino extends Planeta {
         super(nombre, costo, disponibilidad, itinerario, equipo, tipo);
         this.planeta = planeta;
         this.recomendaciones = recomendaciones;
+ 
     }
 }

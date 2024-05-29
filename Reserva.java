@@ -6,6 +6,7 @@ public class Reserva {
     private Destino destino;
     private Usuario usuario;
     private int tipoReserva;
+    private String[][] destinos;
 
 
     //Constructor
@@ -15,6 +16,10 @@ public class Reserva {
         this.destino = destino;
         this.usuario = usuario;
         this.tipoReserva = tipoReserva;
+        this.destinos= {Jupiter,Saturno,Neptuno},
+                       {Ío,Venus,Encélado},
+                       {Marte,Mercurio,Tierra},
+
     }
 
     //Métodos de reserva
@@ -70,3 +75,5 @@ public class Reserva {
     }
 
 }
+
+
