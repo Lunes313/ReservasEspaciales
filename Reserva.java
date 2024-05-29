@@ -5,14 +5,16 @@ public class Reserva {
     private String hora;
     private Destino destino;
     private Usuario usuario;
+    private int tipoReserva;
 
 
     //Constructor
-    public Reserva(String fecha, String hora, Destino destino, Usuario usuario) {
+    public Reserva(String fecha, String hora, Destino destino, Usuario usuario, int tipoReserva) {
         this.fecha = fecha;
         this.hora = hora;
         this.destino = destino;
         this.usuario = usuario;
+        this.tipoReserva = tipoReserva;
     }
 
     //Métodos de reserva
@@ -43,6 +45,10 @@ public class Reserva {
         return usuario;
     }
 
+    public int getTipoReserva() {
+        return tipoReserva;
+    }
+
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
@@ -59,6 +65,8 @@ public class Reserva {
         this.usuario = usuario;
     }
 
-
+    public void setTipoReserva(int tipoReserva) {
+        this.tipoReserva = tipoReserva;
+    }
 
 }

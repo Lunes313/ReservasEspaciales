@@ -5,20 +5,26 @@ public class Usuario {
     private String correo;
     private String telefono;
 
+    private String preferencias;
+
     //Constructor
-    public Usuario(String nombre, String correo, String telefono) {
+    public Usuario(String nombre, String correo, String telefono, String preferencias) {
         this.nombre = nombre;
         this.correo = correo;
         this.telefono = telefono;
+        this.preferencias = preferencias;
     }
 
     //Métodos de usuario
-    public void mostrarUsuario() {
-        System.out.println("Usuario:");
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Correo: " + correo);
-        System.out.println("Teléfono: " + telefono);
+    public void reservar() {
+        System.out.println("Reserva realizada");
     }
+
+
+    public void cancelarReserva() {
+        System.out.println("Reserva cancelada");
+    }
+
 
     //Getters y setters
     public String getNombre() {
