@@ -7,14 +7,15 @@ public class Planeta{
     private String equipo;
     private String tipo;
 
-
-    public Destino(String nombre, int costo, boolean disponibilidad,String itinerario, String equipo,String tipo) {
+    //Constructor
+    public Planeta(String nombre, int costo, boolean disponibilidad,String itinerario, String equipo,String tipo) {
         this.nombre = nombre;
         this.costo = costo;
         this.disponibilidad=disponibilidad; 
         this.itinerario=itinerario; 
         this.equipo=equipo; 
-        this.tipo=tipo; 
+        this.tipo=tipo;
+    }
     
     //Getters y setters
     public String getNombre() {
@@ -56,6 +57,4 @@ public class Planeta{
      public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-}
-
 }
