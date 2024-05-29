@@ -4,6 +4,7 @@ public class Destino {
     private String nombre;
     private String direccion;
     private String telefono;
+    
 
     //Constructor
     public Destino(String nombre, String direccion, String telefono) {
@@ -11,6 +12,6 @@ public class Destino {
         this.direccion = direccion;
         this.telefono = telefono;
     }
-    
+
 
 }
