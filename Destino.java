@@ -1,16 +1,15 @@
-public class Destino {
+public class Destino extends Planeta {
 
     //Atributos de destino
-    private String nombre;
-    private String direccion;
-    private String telefono;
+    private Planeta planeta;
+    private String recomendaciones; 
     
+   
+
 
     //Constructor
-    public Destino(String nombre, String direccion, String telefono) {
-        this.nombre = nombre;
-        this.direccion = direccion;
-        this.telefono = telefono;
+    
+
     }
 
 
