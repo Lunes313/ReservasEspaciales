@@ -66,6 +66,21 @@ public class Agencia {
     }
 
     public void cargarReservas() {
+        File reservasFile = new File("reservas.txt");
+            if (!reservasFile.exists()) {
+                try {
+                    reservasFile.createNewFile();
+                } catch (IOException e) {
+                    System.out.println("Error al crear el archivo de reservas: " + e.getMessage());
+                    continue; 
+                }
+            }
+            reservas.add(reserva);
+            saveReservasToFile(reservas);
+            System.out.println("Reserva registrada exitosamente!");
+        } else {
+            System.out.println("Error");
+        }
         reservas.clear();
         try (BufferedReader br = new BufferedReader(new FileReader("reservas.txt"))) {
             String line;
@@ -74,6 +89,16 @@ public class Agencia {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    private static void saveReservasToFile(ArrayList<Reserva> reservas) {
+        try (FileWriter writer = new FileWriter("reservas.txt", true)) {
+            for (Reserva reserva : reservas) {
+                writer.write(reserva.toString() + "\n");
+            }
+        } catch (IOException e) {
+            System.out.println("Error al guardar las reservas en el archivo: " + e.getMessage());
         }
     }
 
