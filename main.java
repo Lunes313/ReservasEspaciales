@@ -1,4 +1,4 @@
-public class Main {
+public class main {
     // Secuencias de escape ANSI para colores
     public static final String RESET = "\033[0m";
     public static final String CYAN = "\033[0;36m";
