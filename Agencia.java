@@ -1,56 +1,112 @@
-import  java.util.Scanner;
+import java.io.*;
+import java.util.ArrayList;
 
 public class Agencia {
+    private ArrayList<Destino> destinos;
+    private ArrayList<Usuario> usuarios;
+    private ArrayList<Reserva> reservas;
 
-    public static void main(String[] args) {
-        menu();
+    public Agencia() {
+        this.destinos = new ArrayList<>();
+        this.usuarios = new ArrayList<>();
+        this.reservas = new ArrayList<>();
     }
 
-    private static void menu() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Bienvenido a la agencia de viajes");
-        System.out.println("1. Registrarse");
-        System.out.println("2. Iniciar sesión");
-        System.out.println("3. reservar");
-        System.out.println("4. cancelar reserva");
-        System.out.println("5. Mostrar reservas");
-        System.out.println("6. Mostrar destinos disponibles");
-        System.out.println("7. Mostrar destinos recomendados");
-        System.out.println("8. Salir");
-        System.out.println("Ingrese una opción: ");
-        int opcion = sc.nextInt();
-        switch (opcion) {
-            case 1:
-                registrarUsuario();
-                break;
-            case 2:
-                iniciarSesion();
-                break;
-            case 3:
-                reservar();
-                break;
-            case 4:
-                cancelarReserva();
-                break;
-            case 5:
-                mostrarReservas();
-                break;
-            case 6:
-                mostrarDestinos();
-                break;
-            case 7:
-                mostrarDestinosRecomendados();
-                break;
-            case 8:
-                System.out.println("Gracias por visitarnos");
-                break;
-            default:
-                System.out.println("Opción no válida");
-                break;
+    public void registrarUsuario(Usuario usuario) {
+        usuarios.add(usuario);
+        guardarUsuarios();
+    }
+
+    public void agregarDestino(Destino destino) {
+        destinos.add(destino);
+        guardarDestinos();
+    }
+
+    public void realizarReserva(Reserva reserva) {
+        reservas.add(reserva);
+        guardarReservas();
+    }
+
+    public ArrayList<Destino> getDestinosDisponibles() {
+        ArrayList<Destino> disponibles = new ArrayList<>();
+        for (Destino d : destinos) {
+            if (d.isDisponibilidad()) {
+                disponibles.add(d);
+            }
+        }
+        return disponibles;
+    }
+
+    public void cargarUsuarios() {
+        usuarios.clear();
+        try (BufferedReader br = new BufferedReader(new FileReader("usuarios.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                usuarios.add(Usuario.fromString(line));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
+    public void cargarDestinos() {
+        destinos.clear();
+        try (BufferedReader br = new BufferedReader(new FileReader("destinos.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (line.split(";").length == 6) {
+                    destinos.add(Planeta.fromString(line));
+                } else {
+                    destinos.add(Destino.fromString(line));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void cargarReservas() {
+        reservas.clear();
+        try (BufferedReader br = new BufferedReader(new FileReader("reservas.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                reservas.add(Reserva.fromString(line));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    private void guardarUsuarios() {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("usuarios.txt"))) {
+            for (Usuario u : usuarios) {
+                bw.write(u.toString());
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void guardarDestinos() {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("destinos.txt"))) {
+            for (Destino d : destinos) {
+                bw.write(d.toString());
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void guardarReservas() {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("reservas.txt"))) {
+            for (Reserva r : reservas) {
+                bw.write(r.toString());
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
-

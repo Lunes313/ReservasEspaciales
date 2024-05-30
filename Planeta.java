@@ -1,63 +1,38 @@
-public class Planeta {
+public class Planeta extends Destino {
+    private double tamaño;
+    private double distancia;
 
-    private String nombre;
-    private int costo; 
-    private boolean disponibilidad; 
-    private String itinerario;
-    private String equipo;
-    private String tipo;
-
-
-    //Constructor
-    public Planeta(String nombre, int costo, boolean disponibilidad,String itinerario, String equipo,String tipo) {
-        this.nombre = nombre;
-        this.costo = costo;
-        this.disponibilidad=disponibilidad; 
-        this.itinerario=itinerario; 
-        this.equipo=equipo; 
-        this.tipo=tipo;
-    
-    }
-    
-    //Getters y setters
-    public String getNombre() {
-        return nombre;
-    }
-    public int getCosto() {
-        return costo;
-    }
-    public boolean getDisponibilidad() {
-        return disponibilidad;
-    }
-    public String getItinerario() {
-        return itinerario;
-    }
-    public String getEquipo() {
-        return equipo;
-    }
-    public String getTipo() {
-        return tipo;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public void setCosto(int costo) {
-        this.costo = costo;
-    }
-    public void setDisponibilidad(boolean disponibilidad) {
-        this.disponibilidad = disponibilidad;
+    public Planeta(String nombre, String descripcion, double costo, boolean disponibilidad, double tamaño, double distancia) {
+        super(nombre, descripcion, costo, disponibilidad);
+        this.tamaño = tamaño;
+        this.distancia = distancia;
     }
 
-    public void setItinerario(String itinerario) {
-        this.itinerario = itinerario;
+    // Getters y setters
+    public double getTamaño() {
+        return tamaño;
     }
 
-    public void setEquipo(String equipo) {
-        this.equipo = equipo;
+    public void setTamaño(double tamaño) {
+        this.tamaño = tamaño;
     }
 
-     public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public double getDistancia() {
+        return distancia;
+    }
 
+    public void setDistancia(double distancia) {
+        this.distancia = distancia;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ";" + tamaño + ";" + distancia;
+    }
+
+    public static Planeta fromString(String str) {
+        String[] parts = str.split(";");
+        Destino destino = Destino.fromString(String.join(";", parts[0], parts[1], parts[2], parts[3]));
+        return new Planeta(destino.getNombre(), destino.getDescripcion(), destino.getCosto(), destino.isDisponibilidad(), Double.parseDouble(parts[4]), Double.parseDouble(parts[5]));
     }
 }
