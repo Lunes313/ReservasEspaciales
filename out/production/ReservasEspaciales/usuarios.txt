@@ -1,0 +1,4 @@
+laura;lu@gmail;ninguna;1234
+laura;a;a;a
+juan;juansito;agua;1234
+alberto;al;fuego;1234

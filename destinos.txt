@@ -1,14 +1,14 @@
-Marte;Planeta rojo;2000;true;Llevar traje espacial;1
-Luna;Satélite natural de la Tierra;1000;true;No olvidar telescopio;0
-Venus;Planeta caliente;2500;true;Protección solar necesaria;2
-Titán;Satélite de Saturno;3000;true;Traer trajes de exploración;2
-Júpiter;Planeta gigante gaseoso;3500;false;Misión no tripulada;3
-Europa;Satélite de Júpiter;1500;true;Equipo de exploración acuática;1
-Saturno;Planeta con anillos;4000;true;Traer cámaras fotográficas;4
-Encélado;Satélite de Saturno;1800;true;Traer equipo de perforación;1
-Urano;Planeta de inclinación extrema;3200;true;Traer trajes de protección contra el frío;3
-Miranda;Satélite de Urano;2200;true;Prepararse para caminatas espaciales;2
-Neptuno;Planeta azul;3000;true;Llevar trajes de protección contra el frío;2
-Tritón;Satélite de Neptuno;2500;true;Traer trajes de exploración;1
-Plutón;Planeta enano;2000;true;Traer trajes de exploración;1
-Caronte;Satélite de Plutón;1000;false;Traer trajes de exploración;0
+Marte;Planeta rojo;2000.0;true;Llevar traje espacial;1
+Luna;Satélite natural de la Tierra;1000.0;true;No olvidar telescopio;0
+Venus;Planeta caliente;2500.0;true;Protección solar necesaria;2
+Titán;Satélite de Saturno;3000.0;true;Traer trajes de exploración;2
+Júpiter;Planeta gigante gaseoso;3500.0;false;Misión no tripulada;3
+Europa;Satélite de Júpiter;1500.0;true;Equipo de exploración acuática;1
+Saturno;Planeta con anillos;4000.0;true;Traer cámaras fotográficas;4
+Encélado;Satélite de Saturno;1800.0;true;Traer equipo de perforación;1
+Urano;Planeta de inclinación extrema;3200.0;true;Traer trajes de protección contra el frío;3
+Miranda;Satélite de Urano;2200.0;true;Prepararse para caminatas espaciales;2
+Neptuno;Planeta azul;3000.0;true;Llevar trajes de protección contra el frío;2
+Tritón;Satélite de Neptuno;2500.0;true;Traer trajes de exploración;1
+Plutón;Planeta enano;2000.0;false;Traer trajes de exploración;1
+Caronte;Satélite de Plutón;1000.0;false;Traer trajes de exploración;0

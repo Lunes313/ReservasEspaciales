@@ -1,1 +1,2 @@
-Caronte;1000.0;true;12;1
+Caronte;1000.0;false;12/04/23;1
+Plutón;2000.0;false;12/05/24;1

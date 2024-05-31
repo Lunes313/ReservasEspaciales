@@ -11,4 +11,4 @@ Miranda;Satélite de Urano;2200;true;Prepararse para caminatas espaciales;2
 Neptuno;Planeta azul;3000;true;Llevar trajes de protección contra el frío;2
 Tritón;Satélite de Neptuno;2500;true;Traer trajes de exploración;1
 Plutón;Planeta enano;2000;true;Traer trajes de exploración;1
-Caronte;Satélite de Plutón;1000;true;Traer trajes de exploración;0
+Caronte;Satélite de Plutón;1000;false;Traer trajes de exploración;0
