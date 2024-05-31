@@ -1,16 +1,22 @@
-import java.io.*;
 
 public class Destino {
+
+    //atributos
     private String nombre;
     private String descripcion;
     private double costo;
     private boolean disponibilidad;
+    private String recomendaciones;
+    private int equipoNecesario;
 
-    public Destino(String nombre, String descripcion, double costo, boolean disponibilidad) {
+    //constructor
+    public Destino(String nombre, String descripcion, double costo, boolean disponibilidad, String recomendaciones, int equipoNecesario) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.costo = costo;
         this.disponibilidad = disponibilidad;
+        this.recomendaciones = recomendaciones;
+        this.equipoNecesario = equipoNecesario;
     }
 
     // Getters y setters
@@ -38,7 +44,7 @@ public class Destino {
         this.costo = costo;
     }
 
-    public boolean isDisponibilidad() {
+    public boolean getDisponibilidad() {
         return disponibilidad;
     }
 
@@ -46,13 +52,20 @@ public class Destino {
         this.disponibilidad = disponibilidad;
     }
 
-    @Override
-    public String toString() {
-        return nombre + ";" + descripcion + ";" + costo + ";" + disponibilidad;
+    public String getRecomendaciones() {
+        return recomendaciones;
     }
 
-    public static Destino fromString(String str) {
-        String[] parts = str.split(";");
-        return new Destino(parts[0], parts[1], Double.parseDouble(parts[2]), Boolean.parseBoolean(parts[3]));
+    public void setRecomendaciones(String recomendaciones) {
+        this.recomendaciones = recomendaciones;
+    }
+
+    public int getEquipoNecesario() {
+
+        return equipoNecesario;
+    }
+
+    public void setEquipoNecesario(int equipoNecesario) {
+        this.equipoNecesario = equipoNecesario;
     }
 }

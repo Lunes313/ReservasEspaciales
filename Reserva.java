@@ -2,10 +2,8 @@ import java.io.*;
 
 public class Reserva {
         private String fecha;
-        private String hora;
         private String tipoBoleto;
         private Destino destino;
-        private Usuario usuario;
 
 
     public Reserva(Destino destino, String fecha, String tipoBoleto) {
@@ -38,14 +36,4 @@ public class Reserva {
             this.tipoBoleto = tipoBoleto;
         }
 
-        @Override
-        public String toString() {
-            return destino.toString() + ";" + fecha + ";" + tipoBoleto;
-        }
-
-        public static Reserva fromString(String str) {
-            String[] parts = str.split(";");
-            Destino destino = (parts.length == 8) ? Planeta.fromString(String.join(";", parts[0], parts[1], parts[2], parts[3], parts[4], parts[5])) : Destino.fromString(String.join(";", parts[0], parts[1], parts[2], parts[3]));
-            return new Reserva(destino, parts[parts.length - 2], parts[parts.length - 1]);
-        }
 }

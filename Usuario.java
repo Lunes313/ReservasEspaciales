@@ -2,11 +2,15 @@ public class Usuario {
     private String nombre;
     private String correo;
     private String preferencias;
+    private String contrasena;
 
-    public Usuario(String nombre, String correo, String preferencias) {
+
+    //constructor
+    public Usuario(String nombre, String correo, String preferencias, String contrasena) {
         this.nombre = nombre;
         this.correo = correo;
         this.preferencias = preferencias;
+        this.contrasena = contrasena;
     }
 
     // Getters y setters
@@ -34,13 +38,12 @@ public class Usuario {
         this.preferencias = preferencias;
     }
 
-    @Override
-    public String toString() {
-        return nombre + ";" + correo + ";" + preferencias;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public static Usuario fromString(String str) {
-        String[] parts = str.split(";");
-        return new Usuario(parts[0], parts[1], parts[2]);
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
+
 }
