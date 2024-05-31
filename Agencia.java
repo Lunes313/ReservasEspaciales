@@ -2,6 +2,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//Productores: Laura Restrepo Berrio y Kadiha Muhamad Orta
+//Fecha: 30/05/2024
+//Programa de agencia de viajes espaciales
 public class Agencia {
 
     // Atributos estáticos
